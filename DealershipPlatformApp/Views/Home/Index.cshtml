@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    @if (ViewBag.NeedToRegister)
+    {
+        <form method="post" action="/Home/Registration">
+            <section>
+                <button>
+                    You're not registered in our database. Please Click to Register.
+                </button>
+            </section>
+            </form>
+  } 
+    </div>
