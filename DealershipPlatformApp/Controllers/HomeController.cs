@@ -74,16 +74,12 @@ namespace DealershipPlatformApp.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
-        public bool CheckIfUserIsInDB()
-        {
-
+        public bool CheckIfUserIsInDB() {
             var oid = GetOID();
             if (_context.DealerLeadUser.FirstOrDefault(x => x.AzureADId == oid)== null) {
-
                 return false;
             }
-            else
-            {
+            else {
                 return true;
             }
         }
